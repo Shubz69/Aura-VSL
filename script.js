@@ -144,23 +144,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to load Calendly widget
     function loadCalendlyWidget() {
-        // TODO: Replace 'YOUR_CALENDLY_USERNAME' with your actual Calendly username
-        const calendlyUsername = 'YOUR_CALENDLY_USERNAME';
-        
-        if (calendlyUsername === 'YOUR_CALENDLY_USERNAME') {
-            calendlyWidget.innerHTML = `
-                <div style="padding: 40px; text-align: center; color: #b3b3b3;">
-                    <p>Please configure your Calendly username in script.js</p>
-                    <p style="margin-top: 10px; font-size: 14px;">Replace 'YOUR_CALENDLY_USERNAME' with your actual Calendly username</p>
-                </div>
-            `;
-            return;
-        }
+        // Calendly URL with event type
+        const calendlyUrl = 'https://calendly.com/shubzfx/30min';
 
         // Create Calendly inline widget
         if (typeof Calendly !== 'undefined') {
             Calendly.initInlineWidget({
-                url: `https://calendly.com/${calendlyUsername}`,
+                url: calendlyUrl,
                 parentElement: calendlyWidget
             });
         } else {
