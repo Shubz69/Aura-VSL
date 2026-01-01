@@ -45,6 +45,101 @@ body {
     padding: 0 20px;
 }
 
+/* Branding/Logo Section */
+.branding-section {
+    width: 100%;
+    padding: 40px 0;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.logo svg {
+    filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.5));
+    transition: transform 0.3s ease;
+}
+
+.logo:hover svg {
+    transform: scale(1.05) rotate(5deg);
+    filter: drop-shadow(0 0 30px rgba(139, 92, 246, 0.8));
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.brand-name {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0;
+    line-height: 1;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.brand-fx {
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.brand-fx::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+    opacity: 0.6;
+}
+
+.brand-tagline {
+    font-size: clamp(14px, 2vw, 16px);
+    color: var(--text-secondary);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
 /* Hero Section with Video */
 .hero-section {
     width: 100%;
@@ -713,6 +808,27 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .branding-section {
+        padding: 24px 0;
+    }
+    
+    .logo-container {
+        gap: 16px;
+    }
+    
+    .logo svg {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .brand-name {
+        font-size: 28px;
+    }
+    
+    .brand-tagline {
+        font-size: 12px;
+    }
+    
     .tiers-container {
         grid-template-columns: 1fr;
     }
