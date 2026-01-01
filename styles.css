@@ -88,14 +88,15 @@ body {
 }
 
 .brand-name {
-    font-size: clamp(28px, 4vw, 36px);
-    font-weight: 700;
-    letter-spacing: 0.1em;
+    font-size: clamp(32px, 5vw, 42px);
+    font-weight: 600;
+    letter-spacing: 0.15em;
     margin: 0;
     line-height: 1.2;
-    color: var(--text-primary);
+    color: #ffffff;
     text-transform: uppercase;
     text-align: center;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Hero Section with Video */
@@ -780,8 +781,8 @@ body {
     }
     
     .brand-name {
-        font-size: 24px;
-        letter-spacing: 0.08em;
+        font-size: 26px;
+        letter-spacing: 0.12em;
     }
     
     .tiers-container {
